@@ -1,0 +1,134 @@
+body {
+    background-color: #352f2f;
+    background-image: url("../Images/portada.png");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f7f2f2;
+}
+.navbar {
+    background-color: #2e332e;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    color: #f8efef;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.navbar a:hover {
+    background-color: #555555;
+}
+.hamburger-icon {
+    font-size: 24px;
+    color: #f5e9e9;
+    cursor: pointer;
+}
+#nav-menu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #323532;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    z-index: 1000;
+}
+#nav-menu.active {
+    display: block;
+}
+#nav-menu li {
+    padding: 0 15px; /* Espacio entre los elementos para que no estén pegados */
+}
+#nav-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #f8f5f5;
+    text-decoration: none;
+}
+#nav-menu li a:hover {
+    background-color: #f8eeee;
+}
+.accordion-button {
+    background-color: #111311;
+    cursor: pointer;
+    color: rgb(250, 249, 249);
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.accordion-button.active, .accordion-button:hover {
+    background-color: #1a1717 !important;
+}
+.accordion-content {
+    padding: 10px;
+    background-image:url("../Images/portada.png");
+    display: none;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.card {
+    background-image:url("../Images/menu.jpg");
+    color: rgb(243, 241, 241);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+.social-icons {
+    position: relative; /* Cambia a 'relative' para que los íconos solo aparezcan al final del contenido */
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+    right: 10px;  /* Ajusta la distancia desde la parte derecha */
+    display: flex;
+    flex-direction: row; /* Asegura la alineación horizontal */
+    gap: 10px; /* Espacio entre los íconos */
+    padding: 10px 30px 10px 10px; /* Ajusta el padding para mover los íconos hacia la izquierda */
+    z-index: 1000; /* Asegura que estén por encima de otros elementos */
+}
+.social-icons img {
+    width: 40px; /* Ajusta el tamaño de los íconos según lo necesites */
+    height: 40px;
+}
+.hamburger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+    transition: all 0.3s ease; /* Controla la velocidad de la animación */
+}
+
+.hamburger-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
